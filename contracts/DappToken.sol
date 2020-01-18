@@ -56,7 +56,7 @@ contract DappToken {
         balanceOf[_from] -= _value;
         balanceOf[_to] += _value;
         emit Transfer(_from, _to, _value);
-        allowance[_from][msg.sender] -= value;
+        allowance[_from][msg.sender] -= _value;
         return true;
     }
 }
